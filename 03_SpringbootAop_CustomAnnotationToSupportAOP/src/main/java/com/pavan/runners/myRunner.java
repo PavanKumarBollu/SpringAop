@@ -2,9 +2,11 @@ package com.pavan.runners;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
 
 import com.pavan.dao.StudentDao;
 
+@Component
 public class myRunner implements CommandLineRunner {
 
 	@Autowired
