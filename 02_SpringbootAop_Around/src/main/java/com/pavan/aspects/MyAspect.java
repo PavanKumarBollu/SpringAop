@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 public class MyAspect {
 	
 	// pointcut
-	@Pointcut(value = "execution(public * com.pavan.dao.EmployeeDao.saveEmployee())" )
+	@Pointcut(value = "execution(public * com.pavan.dao.EmployeeDao.*())" )
 	public void save() {}
 	
 	@Around(value = "save()")

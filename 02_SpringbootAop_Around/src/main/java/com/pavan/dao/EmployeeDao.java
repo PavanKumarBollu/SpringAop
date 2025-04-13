@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class EmployeeDao {
 	
-	public int saveEmployee()
+	public int saveEmployee1()
 	{
 		System.out.println("Employee Saved To Database.....");
 		return 1;
