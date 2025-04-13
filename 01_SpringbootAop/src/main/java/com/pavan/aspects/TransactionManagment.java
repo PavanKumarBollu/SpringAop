@@ -6,23 +6,23 @@ import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
 
-@Component
 @Aspect
+@Component
 public class TransactionManagment {
 
-	@Pointcut(value = "public void com.pavan.dao.EmployeeDao.saveEmployee()")
+	@Pointcut(value = "execution(public void com.pavan.dao.EmployeeDao.saveEmployee())")
 	public void operation() {
 
 	}
 
 	@Before(value = "operation()")// JoinPoint
 	public void begingTansaction() {
-		System.out.println("Transactionhas Begen");
+		System.out.println("Transactionhas Begin .....");
 	}
 
 	@After(value="operation()")
 	public void commitTansaction() {
-		System.out.println("Transaction Commited ...");
+		System.out.println("Transaction Commited .....");
 	}
 
 }
