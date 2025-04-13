@@ -14,7 +14,7 @@ public class MyRunner implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 			dao.saveEmployee();
-			System.out.println();
+			System.out.println("******");
 	}
 
 }
