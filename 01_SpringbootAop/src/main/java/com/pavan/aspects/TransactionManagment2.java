@@ -8,9 +8,9 @@ import org.springframework.stereotype.Component;
 
 @Aspect
 @Component
-public class TransactionManagment {
+public class TransactionManagment2 {
 
-//	@Pointcut(value = "execution(public void com.pavan.dao.EmployeeDao.saveEmployee())")
+	@Pointcut(value = "execution(public void com.pavan.dao.EmployeeDao.saveEmployee())")
 	public void operation() {
 
 	}
