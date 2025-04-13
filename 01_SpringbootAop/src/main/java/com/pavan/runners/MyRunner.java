@@ -17,6 +17,14 @@ public class MyRunner implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 			dao.saveEmployee();
 			System.out.println(" ");
+			
+			dao.getEmployee();
+			System.out.println();
+			
+			
+			String deleteEmployee = dao.deleteEmployee();
+			System.out.println(deleteEmployee);
+			System.out.println();
 	}
 
 }
