@@ -11,14 +11,19 @@ import org.springframework.stereotype.Component;
 public class MyAspect {
 	
 	// pointcut
-	@Pointcut(value = "execution(public int com.pavan.dao.EmployeeDao.saveEmployee())" )
+	@Pointcut(value = "execution(public * com.pavan.dao.EmployeeDao.saveEmployee())" )
 	public void save() {}
 	
 	@Around(value = "save()")
 	public void around(ProceedingJoinPoint jp)
 	{
 		System.out.println("Transaction Begin.....");
-		Object obj = jp.proceed();
+		try {
+			Object obj = jp.proceed();
+			System.out.println(obj);
+		} catch (Throwable e) {
+			e.printStackTrace();
+		}
 		
 		System.out.println("Transaction Commited.....");
 		
