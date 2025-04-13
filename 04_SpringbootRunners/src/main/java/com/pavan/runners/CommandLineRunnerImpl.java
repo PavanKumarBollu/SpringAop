@@ -3,7 +3,8 @@ package com.pavan.runners;
 import java.util.Arrays;
 
 import org.springframework.boot.CommandLineRunner;
-
+import org.springframework.stereotype.Component;
+@Component
 public class CommandLineRunnerImpl implements CommandLineRunner {
 
 	@Override
