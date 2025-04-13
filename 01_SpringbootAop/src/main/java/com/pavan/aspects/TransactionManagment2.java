@@ -11,9 +11,12 @@ import org.springframework.stereotype.Component;
 public class TransactionManagment2 {
 
 	@Pointcut(value = "execution(public void com.pavan.dao.EmployeeDao.saveEmployee())")
-	public void operation() {
+	public void save() {
 
 	}
+	
+	@Pointcut(value = "execution(public String com.pavan.sao.EmployeeDao.deleteEmployee() )")
+	public void delete() {}
 
 	@Before(value = "operation()")// JoinPoint
 	public void begingTansaction() {
