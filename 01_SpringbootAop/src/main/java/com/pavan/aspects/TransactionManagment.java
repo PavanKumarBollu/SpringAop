@@ -11,11 +11,11 @@ public class TransactionManagment {
 	
 	public void begingTansaction()
 	{
-		
+		System.out.println("Transactionhas Begen");
 	}
-	public void endTansaction()
+	public void commitTansaction()
 	{
-		
+		System.out.println("Transaction Commited ...");
 	}
 	
 	
